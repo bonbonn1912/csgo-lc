@@ -4,11 +4,11 @@ export const getFaceitRank = (elo) =>{
     if(baseElo <= 0){
         return baseLevel
     }else{
-        let level = Math.floor((baseElo-1)/150)
-        if(level > 9){
+        let level = (baseElo-1)/150
+        if(level >= 8){
             return 10
         }else{
-            return level +2
+            return Math.floor(level) + 2
         }
     }
 }
