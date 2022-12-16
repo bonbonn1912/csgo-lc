@@ -71,11 +71,8 @@ const getSteam64Id = (playerObjects) => {
 
 const getMMRank = async (url) => {
   const regex = /\d+/g;
-  const browser = await PUPPETEER.launch({
-    headless: true,
-    args: ['--no-sandbox'],
-    executablePath: '/usr/bin/chromium-browser'
-  });
+  const puppeteer_config = CONFIG.PUPPETEER.RUNTIME == undefined ? {} : CONFIG.PUPPETEER.DOCKER 
+  const browser = await PUPPETEER.launch(puppeteer_config);
   const page = await browser.newPage();
   await page.setUserAgent(
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"

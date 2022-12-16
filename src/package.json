@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./backend/index.js",
-    "prod": "cd ./csgo-lc-frontend && npm run build && node ../backend/index.js"
+    "prod": "cd ./csgo-lc-frontend && npm run build && node ../backend/index.js",
+    "dock": "cd ./csgo-lc-frontend && npm run build && node ../backend/index.js"
   },
   "keywords": [],
   "author": "",

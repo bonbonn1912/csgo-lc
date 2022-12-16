@@ -31,4 +31,6 @@ WORKDIR /src
 
 EXPOSE 3000
 
+ENV RUNTIME docker
+
 CMD ["npm", "run", "prod"]
