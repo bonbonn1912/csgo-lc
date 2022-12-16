@@ -6,6 +6,10 @@ export const Scoreboard = (props) =>{
    
 
     return (
+      <div
+        className="flex justify-center items-center h-screen w-full bg-no-repeat bg-cover overflow-hidden"
+        style={{ backgroundImage: `url(${props.imgUrl})` }}
+      >
         <div className="flex justify-center flex-col bg-black-rgba rounded-lg text-center w-3/5">
         <h2 className="text-2xl font-bold mb-4 text-white">Scoreboard</h2>
         <table className="border-gray-400 w-full opacity-120">
@@ -24,6 +28,6 @@ export const Scoreboard = (props) =>{
         </tbody>
       </table>
         </div>
-        
+        </div>
       );
 }
