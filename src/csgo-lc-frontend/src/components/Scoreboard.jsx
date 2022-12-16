@@ -22,9 +22,9 @@ export const Scoreboard = (props) =>{
           </tr>
         </thead>
         <tbody>
-        {props.players.map((player) => (
-                <PlayerCard key={player.id} singlePlayer={player}/>
-            ))}
+        {props.players.map((player, index) => (
+                <PlayerCard key={player.id} singlePlayer={player} length={props.players.length} index={index}/>
+        ))}
         </tbody>
       </table>
         </div>
